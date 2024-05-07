@@ -24,10 +24,7 @@
         @yield('content')
     </main>
 
-    <footer>
-
-
-    </footer>
+    @include('partials.footer')
 
 
 </body>

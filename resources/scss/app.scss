@@ -9,9 +9,26 @@
     outline: none;
 }
 
-.jumbotron{
+.jumbotron {
     height: 350px;
     background-image: url(../img/jumbotron.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+footer {
+    .footer_top {
+        background-image: url(../img/footer-bg.jpg);
+        background-repeat: no-repeat;
+            background-size: cover;
+        
+
+        .logo_footer {
+            background-image: url(../img/dc-logo-bg.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+
 }
