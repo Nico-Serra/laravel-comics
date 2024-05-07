@@ -7,11 +7,9 @@
         <a href="/"><img src="{{Vite::asset('resources/img/dc-logo.png')}}" alt="" class="w-75"></a>
 
         <div class="d-flex">
-            <a class="nav-link nav-active py-4 text-dark text-uppercase " href="#">Character</a>
-            <a class="nav-link py-4 text-dark text-uppercase" href="#">Comics</a>
-            <a class="nav-link py-4 text-dark text-uppercase" href="#">Movies</a>
-            <a class="nav-link py-4 text-dark text-uppercase" href="#">Character</a>
-            <a class="nav-link py-4 text-dark text-uppercase" href="#">Comics</a>
+            <a class="nav-link {{Route::currentRouteName() === 'home' ? 'nav-active' : ''}} py-4 text-dark text-uppercase " href="/">Homepage</a>
+            <a class="nav-link {{Route::currentRouteName() === 'first' ? 'nav-active' : ''}} py-4 text-dark text-uppercase" href="/firstComic">first Comic</a>
+            <a class="nav-link {{Route::currentRouteName() === 'last' ? 'nav-active' : ''}} py-4 text-dark text-uppercase" href="/lastComic">last Comic</a>
         </div>
 
         <div class="border-bottom border-primary text-end">

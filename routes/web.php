@@ -24,3 +24,31 @@ Route::get('/', function () {
 
     return view('home', compact('comics'));
 })->name('home');
+
+Route::get('/firstComic', function () {
+
+    $comics = config('db.comics');
+    //dd($comics);
+
+    $firstComic = $comics['0'];
+    //dd($firstComic);
+
+    
+
+
+    return view('first', compact('firstComic'));
+})->name('first');
+
+Route::get('/lastComic', function () {
+
+    $comics = config('db.comics');
+    //dd($comics);
+
+    $lastComic = $comics['11'];
+    //dd($lastComic);
+
+    
+
+
+    return view('last', compact('lastComic'));
+})->name('last');
