@@ -16,39 +16,39 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
+    $message = "Welcome to the HomePage of the DC site's";
+
+    return view('home', compact('message'));
+})->name('home');
+
+Route::get('/login', function () {
+
+  
+
+    return view('login');
+})->name('login');
+
+Route::get('/comics', function () {
+
     $comics = config('db.comics');
     //dd($comics);
 
     
 
 
-    return view('home', compact('comics'));
-})->name('home');
+    return view('comics', compact('comics'));
+})->name('comics');
 
-Route::get('/firstComic', function () {
+Route::get('/comics/{id}', function ($id) {
 
-    $comics = config('db.comics');
+    $comic = config('db.comics')[$id];
     //dd($comics);
 
-    $firstComic = $comics['0'];
+    //$firstComic = $comics['0'];
     //dd($firstComic);
 
     
 
 
-    return view('first', compact('firstComic'));
-})->name('first');
-
-Route::get('/lastComic', function () {
-
-    $comics = config('db.comics');
-    //dd($comics);
-
-    $lastComic = $comics['11'];
-    //dd($lastComic);
-
-    
-
-
-    return view('last', compact('lastComic'));
-})->name('last');
+    return view('comic', compact('comic'));
+})->name('comic');

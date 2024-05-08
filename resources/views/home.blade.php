@@ -1,59 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-<section class="bg-dark ">
-    <div class="container p-4">
-        <div class="badges py-4">
-            <h3 class="text-uppercase text-white bg-primary d-inline p-2">Current series</h3>
-        </div>
+    <section class="text-center container">
+        
 
-        <div class="row row-cols-3 row-cols-md-6 g-3">
-            @foreach($comics as $comic)
-            <div class="col">
-                <div class="card-border-0">
-                    <div class="card-img">
-                        <img src="{{$comic['thumb']}}" alt="" class="w-100 h-100 object-fit-cover">
-                    </div>
-                    <div class="card-body">
-                        <p class="text-white text-uppercase">{{$comic['title']}}</p>
+        <h1 class="py-5">{{ $message }}</h1>
 
-                    </div>
-                </div>
-            </div>
-            @endforeach
-        </div>
+        <p class="py-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos aperiam obcaecati earum laudantium assumenda dicta exercitationem? Id, ratione ducimus laboriosam temporibus veritatis et labore maiores non nobis a tenetur inventore? Iste sed velit perspiciatis possimus, tenetur sunt debitis dicta accusantium modi doloribus! Labore laborum eos molestiae ducimus earum nulla consequatur, cupiditate reprehenderit quia quaerat minus tempora illo perferendis ut facere atque quisquam illum, repellendus reiciendis quod qui voluptatum delectus! Ut nam ab maiores placeat deserunt voluptates perspiciatis officia eos, quibusdam labore ad, nemo accusantium obcaecati sed exercitationem. Expedita accusantium magnam quisquam, temporibus beatae architecto voluptas velit ullam nam commodi esse doloremque recusandae asperiores quasi saepe tempora quis quos laboriosam repellendus ad, debitis natus molestias hic facilis! Consectetur voluptatibus a, deleniti perferendis expedita dolores odio at, velit nulla quasi alias accusantium, quae architecto porro ab id quia non dignissimos sunt similique ipsam et! Minima quis, incidunt reprehenderit impedit quo blanditiis doloribus!</p>
 
-        <div class="text-center">
-            <a href="" class="text-uppercase text-white bg-primary text-decoration-none p-2">learn more</a>
-        </div>
-    </div>
-</section>
-
-<section class="bg-primary">
-    <div class="container d-flex justify-content-between py-5">
-        <div class="item d-flex align-items-center gap-2">
-            <img src="{{Vite::asset('resources/img/buy-comics-digital-comics.png')}}" alt="" width="50px" width="50px">
-            <h6 class="text-uppercase text-white">Digital comics</h6>
-        </div>
-        <div class="item d-flex align-items-center gap-2">
-            <img src="{{Vite::asset('resources/img/buy-comics-merchandise.png')}}" alt="" width="50px">
-            <h6 class="text-uppercase text-white">Digital comics</h6>
-        </div>
-        <div class="item d-flex align-items-center gap-2">
-            <img src="{{Vite::asset('resources/img/buy-comics-subscriptions.png')}}" alt="" width="50px">
-            <h6 class="text-uppercase text-white">Digital comics</h6>
-        </div>
-        <div class="item d-flex align-items-center gap-2">
-            <img src="{{Vite::asset('resources/img/buy-comics-shop-locator.png')}}" alt="" width="50px">
-            <h6 class="text-uppercase text-white">Digital comics</h6>
-        </div>
-
-        <div class="item d-flex align-items-center gap-2">
-            <img src="{{Vite::asset('resources/img/buy-dc-power-visa.svg')}}" alt="" width="50px">
-            <h6 class="text-uppercase text-white">Digital comics</h6>
-        </div>
-    </div>
-
-</section>
-
+    </section>
 @endsection
