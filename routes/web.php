@@ -41,9 +41,10 @@ Route::get('/comics', function () {
 
 Route::get('/comics/{id}', function ($id) {
 
-    $comic = config('db.comics')[$id];
+    abort_unless($id >= 0 && $id < count(config('db.comics')), 404);
     //dd($comics);
 
+    $comic = config('db.comics')[$id];
     //$firstComic = $comics['0'];
     //dd($firstComic);
 
