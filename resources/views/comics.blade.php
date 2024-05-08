@@ -10,7 +10,7 @@
             <div class="row row-cols-3 row-cols-md-6 g-3">
                 @foreach ($comics as $index => $comic)
                     <div class="col">
-                        <a href="/comics/{{ $index }}">
+                        <a href="/comics/{{ $index }}" class="text-decoration-none">
                             <div class="card-border-0">
                                 <div class="card-img">
                                     <img src="{{ $comic['thumb'] }}" alt="" class="w-100 h-100 object-fit-cover">
